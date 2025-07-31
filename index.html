@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love You Kurinji</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      transform: rotate(-45deg);
+      animation: pulse 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.2) rotate(-45deg); }
+      100% { transform: scale(1) rotate(-45deg); }
+    }
+
+    .text {
+      margin-top: 30px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+  <div class="text">I Love You Kurinji</div>
+</body>
+</html>
